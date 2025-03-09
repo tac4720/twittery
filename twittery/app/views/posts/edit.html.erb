@@ -1,18 +1,14 @@
-<h1>Edit Post</h1>
+<h1>編集</h1>
 <%= form_with model: @post do |form| %>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
 
   <div>
-    <%= form.label :content %>
     <%= form.text_area :content %>
   </div>
 
   <div>
-    <%= form.submit 'Update Post' %>
+    <%= form.submit '更新', class: 'btn-delete' %>
+
+    <%= link_to '戻る', posts_path, class: 'btn-back'%>
   </div>
 <% end %>
 
-<%= link_to 'Back', posts_path %>
